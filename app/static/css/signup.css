@@ -1,0 +1,620 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #15151e;
+  font-family: Inter, sans-serif;
+}
+@media screen and (min-width: 1440px) {
+  .headermain {
+    top: 0;
+    font-size: 20px;
+    padding-left: 30px;
+    background-color: rgb(43, 43, 59, 0.4);
+    box-shadow: 5px 5px 5px #15151e;
+    margin: auto;
+    width: 100%;
+    height: 70px;
+  }
+  .middlecontent {
+    width: 100%;
+    height: 100vh;
+  }
+  .containerm {
+    margin: auto;
+    height: 450px;
+    width: 800px;
+    margin-top: 20px;
+    margin-bottom: 120px;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 10px 10px 10px black;
+  }
+  #login,#signup {
+    font-size: 20px;
+    background-image: linear-gradient(to right, #2c85ff,#27a4ff,#7b35fc,#f8569e,#ffcb46); 
+    border-radius: 20px; 
+    width: 100px; 
+    margin-right: 20px;
+  }
+  #loginsignup{
+    margin-right: 100px;
+  }
+  .logo {
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .logo:hover {
+    color: #ff6600;
+  }
+  .headermain {
+    top: 0;
+    font-size: 20px;
+    padding-left: 30px;
+    position: sticky;
+    background-color: #2b2b3b;
+    box-shadow: 5px 5px 5px #15151e;
+  }
+  .anchor {
+    color: white;
+  }
+  h5 {
+    color: black;
+    padding-top: 20px;
+  }
+  label {
+    color: white;
+  }
+  h2 {
+    color: white;
+  }
+  .underline-on-click {
+    position: relative;
+    text-decoration: none;
+    color: white; /* Default link color */
+  }
+  .underline-on-click::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #007bff; /* Underline color */
+    position: absolute;
+    bottom: -2px; /* Position the underline below the text */
+    left: 0;
+    transition: width 0.3s ease; /* Smooth transition effect */
+  }
+  .underline-on-click:hover::after,
+  .underline-on-click:active::after {
+    width: 100%; /* Expand the underline on hover and when active */
+  }
+  .navbar-nav .nav-link:hover {
+    color: #ff6600 !important; /* Change hover color to orange */
+  }
+  .nav-item .nav-link:hover {
+    color: #ff6600 !important;
+  }
+  .leftcontainer {
+    width: 50%;
+    float: left;
+    background-color: #110a29;
+  }
+  .rightcontainer {
+    width: 75%;
+    float: right;
+    background-image: url("../login.jpg");
+    width: 600px;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 20px 0 15px -3px #15151e;
+  }
+  label {
+    color: black;
+  }
+  input {
+    border: none; /* Remove default borders */
+    border-bottom: 1px solid #000; /* Add bottom border */
+    outline: none; /* Remove default focus outline */
+    font-size: 16px;
+  }
+  form {
+    margin-top: 40px;
+  }
+  h1 {
+    color: white;
+    margin-top: 40%;
+  }
+}
+@media screen and (min-width:320px) and (max-width:374px) {
+  .headermain {
+    top: 0;
+    font-size: 20px;
+    padding-left: 30px;
+    background-color: rgb(43, 43, 59, 0.4);
+    box-shadow: 5px 5px 5px #15151e;
+    margin: auto;
+    width: 100%;
+    height: 50px;
+  }
+  .middlecontent {
+    width: 100%;
+  }
+  footer{
+    margin-top: 100px;
+    margin-bottom: 0;
+  }
+  .containerm {
+    margin: auto;
+    height: 450px;
+    width: 300px;
+    margin-top: 40px;
+    margin-bottom: 120px;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 10px 10px 10px black;
+  }
+  #login,#signup {
+    background-image: linear-gradient(to right, #2c85ff,#27a4ff,#7b35fc,#f8569e,#ffcb46); 
+  }
+  #loginsignup{
+    margin-right: 100px;
+  }
+  #navbarSupportedContent{
+    z-index: 1000;
+    background-color: rgb(43, 43, 59);
+    position:absolute;
+    top:50px;
+    left:0px;
+    width: 90%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    }
+  .logo {
+    color: white;
+  }
+  .logo:hover {
+    color: #ff6600;
+  }
+  .anchor {
+    color: white;
+  }
+  h5 {
+    color: black;
+    padding-top: 20px;
+  }
+  label {
+    color: white;
+  }
+  h2 {
+    color: white;
+  }
+  .underline-on-click {
+    position: relative;
+    text-decoration: none;
+    color: white; /* Default link color */
+  }
+  .underline-on-click::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #007bff; /* Underline color */
+    position: absolute;
+    bottom: -2px; /* Position the underline below the text */
+    left: 0;
+    transition: width 0.3s ease; /* Smooth transition effect */
+  }
+  .underline-on-click:hover::after,
+  .underline-on-click:active::after {
+    width: 100%; /* Expand the underline on hover and when active */
+  }
+  .navbar-nav .nav-link:hover {
+    color: #ff6600 !important; /* Change hover color to orange */
+  }
+  .nav-item .nav-link:hover {
+    color: #ff6600 !important;
+  }
+  .leftcontainer {
+    width: 100%;
+    float: left;
+    background-color: #110a29;
+  }
+  .rightcontainer {
+    width: 75%;
+    float: right;
+    background-image: url("../login.jpg");
+    width: 600px;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 20px 0 15px -3px #15151e;
+    display: none;
+  }
+  label {
+    color: black;
+  }
+  input {
+    border: none; /* Remove default borders */
+    border-bottom: 1px solid #000; /* Add bottom border */
+    outline: none; /* Remove default focus outline */
+    font-size: 16px;
+  }
+  form {
+    margin-top: 40px;
+  }
+  h1 {
+    color: white;
+    margin-top: 40%;
+  }
+  .navbar-toggler{
+    background-color: white;
+  }
+}
+@media screen and (min-width:375px) and (max-width:450px) {
+  .headermain {
+    top: 0;
+    font-size: 20px;
+    padding-left: 30px;
+    background-color: rgb(43, 43, 59, 0.4);
+    box-shadow: 5px 5px 5px #15151e;
+    margin: auto;
+    width: 100%;
+    height: 50px;
+  }
+  .middlecontent {
+    width: 100%;
+  }
+  footer{
+    margin-top: 100px;
+    margin-bottom: 0;
+  }
+  .containerm {
+    margin: auto;
+    height: 450px;
+    width: 350px;
+    margin-top: 40px;
+    margin-bottom: 120px;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 10px 10px 10px black;
+  }
+  #login,#signup {
+    background-image: linear-gradient(to right, #2c85ff,#27a4ff,#7b35fc,#f8569e,#ffcb46); 
+  }
+  #loginsignup{
+    margin-right: 100px;
+  }
+  #navbarSupportedContent{
+    z-index: 1000;
+    background-color: rgb(43, 43, 59);
+    position:absolute;
+    top:50px;
+    left:0px;
+    width: 90%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    }
+  .logo {
+    color: white;
+  }
+  .logo:hover {
+    color: #ff6600;
+  }
+  .anchor {
+    color: white;
+  }
+  h5 {
+    color: black;
+    padding-top: 20px;
+  }
+  label {
+    color: white;
+  }
+  h2 {
+    color: white;
+  }
+  .underline-on-click {
+    position: relative;
+    text-decoration: none;
+    color: white; /* Default link color */
+  }
+  .underline-on-click::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #007bff; /* Underline color */
+    position: absolute;
+    bottom: -2px; /* Position the underline below the text */
+    left: 0;
+    transition: width 0.3s ease; /* Smooth transition effect */
+  }
+  .underline-on-click:hover::after,
+  .underline-on-click:active::after {
+    width: 100%; /* Expand the underline on hover and when active */
+  }
+  .navbar-nav .nav-link:hover {
+    color: #ff6600 !important; /* Change hover color to orange */
+  }
+  .nav-item .nav-link:hover {
+    color: #ff6600 !important;
+  }
+  .leftcontainer {
+    width: 100%;
+    float: left;
+    background-color: #110a29;
+  }
+  .rightcontainer {
+    width: 75%;
+    float: right;
+    background-image: url("../login.jpg");
+    width: 600px;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 20px 0 15px -3px #15151e;
+    display: none;
+  }
+  label {
+    color: black;
+  }
+  input {
+    border: none; /* Remove default borders */
+    border-bottom: 1px solid #000; /* Add bottom border */
+    outline: none; /* Remove default focus outline */
+    font-size: 16px;
+  }
+  form {
+    margin-top: 40px;
+  }
+  h1 {
+    color: white;
+    margin-top: 40%;
+  }
+  .navbar-toggler{
+    background-color: white;
+  }
+}
+@media screen and (min-width:767px) and (max-width:992px) {
+  .headermain {
+    top: 0;
+    font-size: 20px;
+    padding-left: 30px;
+    background-color: rgb(43, 43, 59, 0.4);
+    box-shadow: 5px 5px 5px #15151e;
+    margin: auto;
+    width: 100%;
+    height: 50px;
+  }
+  .middlecontent {
+    width: 100%;
+  }
+  footer{
+    margin-top: 100px;
+    margin-bottom: 0;
+  }
+  .containerm {
+    margin: auto;
+    height: 450px;
+    width: 650px;
+    margin-top: 40px;
+    margin-bottom: 120px;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 10px 10px 10px black;
+  }
+  #login,#signup {
+    background-image: linear-gradient(to right, #2c85ff,#27a4ff,#7b35fc,#f8569e,#ffcb46); 
+  }
+  #loginsignup{
+    margin-right: 100px;
+  }
+  #navbarSupportedContent{
+    z-index: 1000;
+    background-color: rgb(43, 43, 59);
+    position:absolute;
+    top:50px;
+    left:0px;
+    width: 90%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    }
+  .logo {
+    color: white;
+  }
+  .logo:hover {
+    color: #ff6600;
+  }
+  .anchor {
+    color: white;
+  }
+  h5 {
+    color: black;
+    padding-top: 20px;
+  }
+  label {
+    color: white;
+  }
+  h2 {
+    color: white;
+  }
+  .underline-on-click {
+    position: relative;
+    text-decoration: none;
+    color: white; /* Default link color */
+  }
+  .underline-on-click::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #007bff; /* Underline color */
+    position: absolute;
+    bottom: -2px; /* Position the underline below the text */
+    left: 0;
+    transition: width 0.3s ease; /* Smooth transition effect */
+  }
+  .underline-on-click:hover::after,
+  .underline-on-click:active::after {
+    width: 100%; /* Expand the underline on hover and when active */
+  }
+  .navbar-nav .nav-link:hover {
+    color: #ff6600 !important; /* Change hover color to orange */
+  }
+  .nav-item .nav-link:hover {
+    color: #ff6600 !important;
+  }
+  .leftcontainer {
+    width: 50%;
+    float: left;
+    background-color: #110a29;
+  }
+  .rightcontainer {
+    width: 75%;
+    float: right;
+    background-image: url("../login.jpg");
+    width: 600px;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 20px 0 15px -3px #15151e;
+  }
+  label {
+    color: black;
+  }
+  input {
+    border: none; /* Remove default borders */
+    border-bottom: 1px solid #000; /* Add bottom border */
+    outline: none; /* Remove default focus outline */
+    font-size: 16px;
+  }
+  form {
+    margin-top: 40px;
+  }
+  h1 {
+    color: white;
+    margin-top: 40%;
+  }
+  .navbar-toggler{
+    background-color: white;
+  }
+}
+@media screen and (min-width:993px) and (max-width:1025px) {
+  .headermain {
+    top: 0;
+    font-size: 20px;
+    padding-left: 30px;
+    background-color: rgb(43, 43, 59, 0.4);
+    box-shadow: 5px 5px 5px #15151e;
+    margin: auto;
+    width: 100%;
+    height: 70px;
+  }
+  .middlecontent {
+    width: 100%;
+  }
+  footer{
+    margin-top: 100px;
+    margin-bottom: 0;
+  }
+  .containerm {
+    margin: auto;
+    height: 450px;
+    width: 800px;
+    margin-top: 40px;
+    margin-bottom: 120px;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 10px 10px 10px black;
+  }
+  #login,#signup {
+    background-image: linear-gradient(to right, #2c85ff,#27a4ff,#7b35fc,#f8569e,#ffcb46); 
+  }
+  #loginsignup{
+    margin-right: 100px;
+  }
+  .logo {
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .logo:hover {
+    color: #ff6600;
+  }
+  .anchor {
+    color: white;
+  }
+  h5 {
+    color: black;
+    padding-top: 20px;
+  }
+  label {
+    color: white;
+  }
+  h2 {
+    color: white;
+  }
+  .underline-on-click {
+    position: relative;
+    text-decoration: none;
+    color: white; /* Default link color */
+  }
+  .underline-on-click::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #007bff; /* Underline color */
+    position: absolute;
+    bottom: -2px; /* Position the underline below the text */
+    left: 0;
+    transition: width 0.3s ease; /* Smooth transition effect */
+  }
+  .underline-on-click:hover::after,
+  .underline-on-click:active::after {
+    width: 100%; /* Expand the underline on hover and when active */
+  }
+  .navbar-nav .nav-link:hover {
+    color: #ff6600 !important; /* Change hover color to orange */
+  }
+  .nav-item .nav-link:hover {
+    color: #ff6600 !important;
+  }
+  .leftcontainer {
+    width: 50%;
+    float: left;
+    background-color: #110a29;
+  }
+  .rightcontainer {
+    width: 75%;
+    float: right;
+    background-image: url("../login.jpg");
+    width: 600px;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 20px 0 15px -3px #15151e;
+  }
+  label {
+    color: black;
+  }
+  input {
+    border: none; /* Remove default borders */
+    border-bottom: 1px solid #000; /* Add bottom border */
+    outline: none; /* Remove default focus outline */
+    font-size: 16px;
+  }
+  form {
+    margin-top: 40px;
+  }
+  h1 {
+    color: white;
+    margin-top: 40%;
+  }
+  .navbar-toggler{
+    background-color: white;
+  }
+}

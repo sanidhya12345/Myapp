@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignUp</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <link rel="stylesheet" href="../static/css/spsignup.css">
+   <style>
+    footer{
+      background-color: #2b2b3b;
+   }
+   footer h5{
+     color:white
+   }
+   </style>
+</head>
+<body>
+  <div class="headermain">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand logo" href="/" >MyApp</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link underline-on-click" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link underline-on-click" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link underline-on-click" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link underline-on-click" href="#">Explore</a>
+              </li>
+            </ul>
+            <div class="d-flex">
+              <ul class="list-unstyled mb-2 mb-lg-0" id="loginsignup">
+                  <li class="nav-item  decoration-0">
+                      <a class="anchor btn" href="/logintype" role="button" aria-expanded="false" id="login">
+                          Login
+                      </a>
+                      <a class="anchor btn" href="/signuptype" role="button" aria-expanded="false" id="signup">
+                        Signup
+                    </a>
+                    </li>
+              </ul>
+          </div>
+          </div>
+        </div>
+      </nav>
+</div>
+  <div
+      class="container border-0 border-secondary rounded" id="formcontainer">
+      <h2 class="text-center" style="padding-top: 20px">Sign Up</h2>
+      <div class="row justify-content-center">
+        <div class="col-4" id="otpform">
+          <form id="emailForm" action="/send_otp" method="POST">
+            {% if email=="" %}
+            <input type="email" id="email" name="email" placeholder="Enter Email" required>
+            <button type="submit" onclick="changeVisibility()">Send OTP</button>
+            {% else %}
+            <input type="email" id="email" name="email" value="{{email}}" disabled>
+            {% endif %}
+        </form>
+        </div>
+        <div class="col-4" id="otpform">
+            {% if verify==True %}
+             <label for="">Verified Successfully</label>
+            {% else %}
+            <form id="otpForm" action="/verify_otp" method="POST" >
+              {% if email!="" %}
+              <input type="text" id="otp" name="otp" maxlength="6" placeholder="Enter OTP" required>
+              <button type="submit">Validate OTP</button>
+              {% else %}
+              <input type="text" id="otp" name="otp" maxlength="6" placeholder="Enter OTP" required disabled>
+              {% endif %}
+          </form>
+            {% endif %}
+        </div>
+      </div>
+      <form class="my-3" action="/spsignup" method="POST">
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone No.</label>
+          <input
+            type="number"
+            class="form-control"
+            name="phone"
+            id="phone"
+            aria-describedby="emailHelp"
+            placeholder="Enter Phone Number"
+          />
+          <hr style="color: white;">
+          <div class="my-3">
+            <label for="oname" class="form-label">Owner's Name</label>
+            <input
+              type="name"
+              class="form-control"
+              name="oname"
+              id="oname"
+              aria-describedby="emailHelp"
+              placeholder="Enter Owner's Name"
+              required
+            />
+          </div>
+          <div class="my-3">
+            <label for="ename" class="form-label">Establishment's Name</label>
+            <input
+              type="name"
+              class="form-control"
+              name="ename"
+              id="ename"
+              aria-describedby="emailHelp"
+              placeholder="Enter Establishment's Name"
+              required
+            />
+          </div>
+          <hr style="color: white;">
+          <label style="font-size: 20px;">Address</label>
+          <div class="my-3">
+            <label for="hno" class="form-label">H No./Plot No.</label>
+            <input
+              type="text"
+              class="form-control"
+              name="hno"
+              id="hno"
+              aria-describedby="emailHelp"
+              placeholder="Enter House No./Plot No."
+              required
+            />
+          </div>
+          <div class="my-3">
+            <label for="streetname" class="form-label">Street Name/Road No.</label>
+            <input
+              type="text"
+              class="form-control"
+              name="streetname"
+              id="streetname"
+              aria-describedby="emailHelp"
+              placeholder="Enter Street/Road No."
+              required
+            />
+          </div>
+          <div class="my-3">
+            <label for="locality" class="form-label">Locality/Area/Colony</label>
+            <input
+              type="text"
+              class="form-control"
+              name="locality"
+              id="locality"
+              aria-describedby="emailHelp"
+              placeholder="Enter Locality/Area/Colony"
+              required
+            />
+          </div>
+          <div class="my-3">
+            <label for="landmark" class="form-label">Major Landmark</label>
+            <input
+              type="text"
+              class="form-control"
+              name="landmark"
+              id="landmark"
+              aria-describedby="emailHelp"
+              placeholder="Enter Major Landmark"
+              required
+            />
+          </div>
+          <div class="my-3">
+            <label for="city" class="form-label">City/District/Town</label>
+            <input
+              type="text"
+              class="form-control"
+              name="city"
+              id="city"
+              aria-describedby="emailHelp"
+              placeholder="Enter Major Landmark"
+              required
+            />
+          </div>
+          <div class="my-4">
+            <label for="states" class="form-label">Select a state:</label>
+  <select id="states" name="states" required>
+    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+    <option value="Andhra Pradesh">Andhra Pradesh</option>
+    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+    <option value="Assam">Assam</option>
+    <option value="Bihar">Bihar</option>
+    <option value="Chandigarh">Chandigarh</option>
+    <option value="Chhattisgarh">Chhattisgarh</option>
+    <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+    <option value="Daman and Diu">Daman and Diu</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Goa">Goa</option>
+    <option value="Gujarat">Gujarat</option>
+    <option value="Haryana">Haryana</option>
+    <option value="Himachal Pradesh">Himachal Pradesh</option>
+    <option value="Jharkhand">Jharkhand</option>
+    <option value="Karnataka">Karnataka</option>
+    <option value="Kerala">Kerala</option>
+    <option value="Lakshadweep">Lakshadweep</option>
+    <option value="Madhya Pradesh">Madhya Pradesh</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="Manipur">Manipur</option>
+    <option value="Meghalaya">Meghalaya</option>
+    <option value="Mizoram">Mizoram</option>
+    <option value="Nagaland">Nagaland</option>
+    <option value="Odisha">Odisha</option>
+    <option value="Puducherry">Puducherry</option>
+    <option value="Punjab">Punjab</option>
+    <option value="Rajasthan">Rajasthan</option>
+    <option value="Sikkim">Sikkim</option>
+    <option value="Tamil Nadu">Tamil Nadu</option>
+    <option value="Telangana">Telangana</option>
+    <option value="Tripura">Tripura</option>
+    <option value="Uttar Pradesh">Uttar Pradesh</option>
+    <option value="Uttarakhand">Uttarakhand</option>
+    <option value="West Bengal">West Bengal</option>
+  </select>
+          </div>
+          <div class="mb-3">
+            <label for="pincode" class="form-label">Pincode</label>
+            <input
+              type="number"
+              class="form-control"
+              name="pincode"
+              id="pincode"
+              aria-describedby="emailHelp"
+              placeholder="Enter Pincode"
+              required
+            />
+        <div class="text-center my-3">
+          <button type="submit" class="btn btn-warning w-50">Add Services</button>
+        </div>
+      </form>
+    </div>
+</div>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+.main{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left-container{
+    float:left;
+    width: 60%;
+    background-color: #15151e;
+    color: white;
+}
+.heading h1{
+    margin-top: 12.5%;
+    font-size: 60px;
+}
+.heading p{
+    font-size: 30px;
+}
+.sp{
+    width: 50%;
+    margin-top: 40px;
+}
+.sp a{
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+}
+.cus{
+    width: 50%;
+    margin-top: 40px;
+}
+.cus a{
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+}
+.right-container{
+    float: right;
+    width: 40%;
+    background-image: url('../white.png');
+}
+.left-container a:hover{
+    background-color: #2b2b3b;
+}
+@media screen and (min-width:320px) and (max-width:374px){
+    .main{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .left-container{
+        float:left;
+        width: 100%;
+        background-color: #15151e;
+        color: white;
+    }
+    .heading h1{
+        margin-top: 12.5%;
+        font-size: 40px;
+    }
+    .heading p{
+        font-size: 30px;
+    }
+    .sp{
+        width: 80%;
+        margin-top: 40px;
+    }
+    .sp a{
+        font-size: 20px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: white;
+    }
+    .cus{
+        width: 80%;
+        margin-top: 40px;
+    }
+    .cus a{
+        font-size: 20px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: white;
+    }
+    .right-container{
+        float: right;
+        width: 40%;
+        background-image: url('../white.png');
+        display: none;
+    }
+    .left-container a:hover{
+        background-color: #2b2b3b;
+    }   
+}
+@media screen and (min-width:375px) and (max-width:450px){
+    .main{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .left-container{
+        float:left;
+        width: 100%;
+        background-color: #15151e;
+        color: white;
+    }
+    .heading h1{
+        margin-top: 12.5%;
+        font-size: 40px;
+    }
+    .heading p{
+        font-size: 30px;
+    }
+    .sp{
+        width: 80%;
+        margin-top: 40px;
+    }
+    .sp a{
+        font-size: 20px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: white;
+    }
+    .cus{
+        width: 80%;
+        margin-top: 40px;
+    }
+    .cus a{
+        font-size: 20px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: white;
+    }
+    .right-container{
+        float: right;
+        width: 40%;
+        background-image: url('../white.png');
+        display: none;
+    }
+    .left-container a:hover{
+        background-color: #2b2b3b;
+    }   
+}
+@media screen and (min-width:450px) and (max-width:569px){
+    .main{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .left-container{
+        float:left;
+        width: 100%;
+        background-color: #15151e;
+        color: white;
+    }
+    .heading h1{
+        margin-top: 12.5%;
+        font-size: 40px;
+    }
+    .heading p{
+        font-size: 30px;
+    }
+    .sp{
+        width: 80%;
+        margin-top: 40px;
+    }
+    .sp a{
+        font-size: 20px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: white;
+    }
+    .cus{
+        width: 80%;
+        margin-top: 40px;
+    }
+    .cus a{
+        font-size: 20px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: white;
+    }
+    .right-container{
+        float: right;
+        width: 40%;
+        background-image: url('../white.png');
+        display: none;
+    }
+    .left-container a:hover{
+        background-color: #2b2b3b;
+    }  
+}
+@media screen and (min-width:767px) and (max-width:992px){
+    .main{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .left-container{
+        float:left;
+        width: 100%;
+        background-color: #15151e;
+        color: white;
+    }
+    .heading h1{
+        margin-top: 12.5%;
+        font-size: 40px;
+    }
+    .heading p{
+        font-size: 30px;
+    }
+    .sp{
+        width: 80%;
+        margin-top: 40px;
+    }
+    .sp a{
+        font-size: 20px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: white;
+    }
+    .cus{
+        width: 80%;
+        margin-top: 40px;
+    }
+    .cus a{
+        font-size: 20px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: white;
+    }
+    .right-container{
+        float: right;
+        width: 40%;
+        background-image: url('../white.png');
+        display: none;
+    }
+    .left-container a:hover{
+        background-color: #2b2b3b;
+    } 
+}
+@media screen and (min-width:992px) and (max-width:1025px){
+    .main{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .left-container{
+        float:left;
+        width: 100%;
+        background-color: #15151e;
+        color: white;
+    }
+    .heading h1{
+        margin-top: 12.5%;
+        font-size: 70px;
+    }
+    .heading p{
+        font-size: 30px;
+    }
+    .sp{
+        width: 80%;
+        margin-top: 40px;
+    }
+    .sp a{
+        font-size: 20px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: white;
+    }
+    .cus{
+        width: 80%;
+        margin-top: 40px;
+    }
+    .cus a{
+        font-size: 20px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: white;
+    }
+    .right-container{
+        float: right;
+        width: 40%;
+        background-image: url('../white.png');
+        display: none;
+    }
+    .left-container a:hover{
+        background-color: #2b2b3b;
+    } 
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand anchor" href="/home">MyApp</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link underline-on-click" aria-current="page" href="/home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link underline-on-click" aria-current="page" href="/dashboard" onclick="showDash()">Dashboard</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link underline-on-click" href="#">About</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle anchor" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Services
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="d-flex">
+                  <ul class="list-unstyled mb-2 mb-lg-0" style="margin-right: 20px;">
+                    <li class="nav-item dropdown decoration-0">
+                      <a class="nav-link anchor btn" aria-expanded="false" href="/notificationpage">
+                          <i class="fas fa-bell fa-1x" style="color: white;" ></i>
+                          Notifications
+                        </a>
+                    </li>
+                  </ul>
+                    <ul class="list-unstyled mb-2 mb-lg-0" style="margin-right: 100px;">
+                        <li class="nav-item dropdown decoration-0">
+                            <button class="nav-link dropdown-toggle anchor" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user" style="color: white;" ></i>
+                                {{name}}
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Profile</a></li>
+                              <li><a class="dropdown-item" href="#">Settings</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                            </ul>
+                          </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </div>
+    <div class="container w-50 my-3 middlecontent">
+        {% for notify in allNotifications %}
+    <div class="rounded mb-3" style="background-color: #FFF8DB;" id="{{notify.id}}">
+        <p style="margin-left: 20px; padding-top: 10px;">
+            Service Name:{{notify.serviceName}} <br>
+            Service Provider:{{notify.serviceProvider}} <br>
+            Customer Name:{{notify.name}} <br>
+        </p>
+        <a href="/delete/{{notify.id}}" class="btn btn-danger btn-sm" style="margin-left: 20px; margin-bottom: 20px;">Delete</a>
+        <a class="btn btn-success btn-sm" style="margin-left: 20px; margin-bottom: 20px;" onclick="changeColor('{{notify.id}}')">Mark As Read</a>
+    </div>
+    {% endfor %}
+    </div>
+    <footer class="footer">
+        <div class="container" style="width: 100%;">
+          <div class="row">
+            <div class="col-md-4">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h5>Products and Services</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Product 1</a></li>
+                <li><a href="#">Product 2</a></li>
+                <li><a href="#">Service 1</a></li>
+                <li><a href="#">Service 2</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h5>Enquiry Form</h5>
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-12">
+              <p class="text-center">© 2024 Your Company. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script>
+        function changeColor(value){
+            document.getElementById(value).style.backgroundColor='#DEF9C4'
+        }
+      </script>
+</body>
+</html>

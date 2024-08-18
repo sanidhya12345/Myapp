@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+    background-color: #15151e;
+    font-family: Inter, sans-serif;
+}
+.containerm{
+  margin:auto;
+}
+.logo{
+    color: white;
+  }
+  .logo:hover{
+    color: #ff6600;
+  }
+.headermain{
+    top: 0;
+font-size: 20px;
+padding-left: 30px;
+position: sticky;
+background-color: #2b2b3b;
+box-shadow: 5px 5px 5px #15151e;
+}
+.anchor{
+    color: white;
+}
+footer{
+    background-color: #00ADB5;
+}
+h5{
+    color: black;
+    padding-top: 20px;
+}
+footer p{
+    color: white;
+}
+footer{
+    flex-shrink: 0;
+}
+label{
+    color: white;
+}
+h2{
+    color: white;
+}
+.underline-on-click {
+    position: relative;
+    text-decoration: none;
+    color: white; /* Default link color */
+  }
+  .underline-on-click::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #007bff; /* Underline color */
+    position: absolute;
+    bottom: -2px; /* Position the underline below the text */
+    left: 0;
+    transition: width 0.3s ease; /* Smooth transition effect */
+  }
+  .underline-on-click:hover::after,
+  .underline-on-click:active::after {
+    width: 100%; /* Expand the underline on hover and when active */
+  }
+  .navbar-nav .nav-link:hover {
+    color: #ff6600 !important; /* Change hover color to orange */
+  }
+  .nav-item .nav-link:hover{
+    color: #ff6600 !important; 
+  }
+.leftcontainer{
+    width: 75%;
+    float: right;
+    background-image: url('../login.jpg');
+    width: 600px;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 10px 10px 10px black
+}
+.rightcontainer{
+    width: 50%;
+    float:right;
+    background-color:#110a29;
+}
+label{
+    color: black;
+}
+input{
+    border: none; /* Remove default borders */
+    border-bottom: 1px solid #000; /* Add bottom border */
+    outline: none; /* Remove default focus outline */
+    font-size: 16px;
+}
+form{
+    margin-top: 40px;
+}
+h1{
+  color: white;
+  margin-top: 40%;
+}
+.middlecontainer{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    align-items: flex-start; /* Align items at the start (top) */
+}
+.leftprofile{
+    width: 20%;
+    flex-shrink: 0;
+    margin-left: 10%;
+    color: white;
+}
+.rightdescription{
+    width: 60%;
+    height: 200vh;
+    color: white;
+}
+
+.leftprofile img{
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+}
+
+.rightdescription h3{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+hr{
+    margin-left: 30px;
+    height: 4px;
+    background-color: black;
+}
+#button{
+    margin-left: 30px;
+}
